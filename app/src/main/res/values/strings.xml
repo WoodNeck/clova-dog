@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">ClovaDog</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_title">Clova Project</string>
+
+    <string name="intro_1">4차 산업혁명과 함께\n우리 곁에 다가온 딥러닝,\n어떻게 동작하는지 알고 계신가요?</string>
+    <string name="intro_2">당신의 음성 명령에 따라\n학습하는 강아지들을\n알아보지 않으시겠어요?</string>
+    <string name="intro_login">한 번 시작해볼까요?</string>
+
+    <string name="main_title">당신의 목소리를\n학습하는\n인공지능 강아지</string>
+    <string name="main_subtitle">당신도 한 마리 키워보시겠어요?</string>
+    <string name="main_signup">SIGN UP</string>
+    <string name="main_login">Facebook으로 로그인</string>
+
+    <string name="dog_desc_mlp">긍정적인 에너지가 넘치는 비글입니다. 엄청난 친화력이 장점입니다.</string>
+    <string name="dog_desc_rnn">씩씩하고 영리한 코기입니다. 귀여울 뿐만 아니라 머리도 똑똑해서 주인의 훈련을 잘 알아듣습니다.</string>
+    <string name="dog_desc_dqn">불독을 소형화하여 개량한 견종이지만, 공격적인 본능이 남아있는 프렌치 불독입니다. 활발하고 명랑한 것이 특징입니다.</string>
+    <string name="dog_desc_drqn">애교가 많고 느긋한 성격의 퍼그입니다. 하지만 고집이 세고 자기 뜻대로 행동하곤 해서 주인 입장에서 무시받는 다는 느낌을 받을 수도 있습니다.</string>
+    <string name="model_desc_mlp">MLP(Multi-layer Perceptron)는 모든 딥러닝 인공신경망의 기본이 되는 모델입니다. 단순하고 정적인 신경망이지만, 그만큼 빠르고 강력합니다.</string>
+    <string name="model_desc_rnn">RNN(Recurrent Nerual Network)은 기존 MLP에 시간적 업데이트 요소를 추가하여 연속된 입력을 처리할 수 있습니다. 이 네트워크를 사용하는 강아지는 문장 내에서 순차적인 단어들의 관계를 잘 포착해냅니다.</string>
+    <string name="model_desc_dqn">DQN(Deep Q-Network)은 특정 게임에서 높은 점수를 얻는 방법을 고민하는, 강화 학습 이론을 바탕으로 고안된 모델 중 하나입니다. 이 네트워크를 사용하는 강아지는 주인의 말을 맞추는 것을 하나의 게임으로 생각할 것입니다.</string>
+    <string name="model_desc_drqn">DRQN(Deep Recurrent Q-Network)는 이름에서 나타나듯, RNN과 DQN이 합쳐진 모델입니다. 지나치게 복잡한 모델이기 때문에 오히려 단순한 문제에는 약한 모습을 보일 수 있습니다.</string>
+
+    <string name="dog_menu_profile">프로필</string>
+    <string name="dog_menu_selectdog">강아지 선택</string>
+    <string name="dog_menu_setting">설정</string>
+    <string name="dog_menu_logout">로그아웃</string>
+    <string name="dog_menu_license">라이선스</string>
+
+    <string name="dash_desc_overview">사용자 명령에 대한 예측 결과입니다.\n강아지는 총 6가지 행동에 대한 예측확률을 반환하며, 그 총합은 1입니다.</string>
+    <string name="dash_desc_voice">사용자의 음성은 Clova CSR API를 통해 텍스트로 변환됩니다.\nClova API는 미리 학습된 인공지능으로서, 한국어 음성을 텍스트로 바꾸는 데 특화되어 있습니다.</string>
+    <string name="dash_desc_morpheme">텍스트로 변환된 음성정보는 의미 단위의 형태소로 분할됩니다.\n각 형태소는 미리 학습된 단어 임베딩 모델에 의해 유사도를 반영한 숫자 벡터로 변환됩니다.\n즉, 유사한 단어는 유사한 숫자로 대응되며, 이 숫자가 강아지 인공지능이 받아들이는 입력입니다.</string>
+    <string name="dash_desc_result">사용자의 피드백이 들어오면, 인공지능은 피드백을 충족시키기 위한 방식으로 학습을 진행합니다.\n긍정 피드백의 경우 앞에서 얻은 숫자 벡터가 해당 행동의 확률을 1, 나머지 행동의 확률을 0으로 만드는 방향으로 개선되며, 부정 피드백의 경우 해당 행동의 확률을 0, 나머지 행동의 확률을 1로 만드는 방향으로 개선됩니다.</string>
+
+    <string name="submit">전송</string>
+    <string name="cancel">취소</string>
+
+    <string name="feedback_yes">칭찬</string>
+    <string name="feedback_no">야단</string>
+
+    <string name="voice_holder">연결 중...</string>
+
+    <!-- DASHBOARD -->
+    <string name="dashboard_list">학습 로그</string>
+    <string name="dashboard_overview">Overview</string>
+    <string name="dashboard_voice">음성인식결과</string>
+    <string name="dashboard_morpheme">형태소파싱결과</string>
+    <string name="dashboard_result">학습 전후 값 변화</string>
+
+    <string name="model_info_list">모델 설명</string>
+    <string name="model_info_overview">모델 설명</string>
+
+    <string name="voice_not_exist">음성인식 데이터가 존재하지 않습니다.</string>
+    <string name="morpheme_not_exist">형태소 분석 결과가 존재하지 않습니다.</string>
+
+    <string name="facebook_app_id">FACEBOOK_APP_ID_HERE</string>
+    <string name="fb_login_protocol_scheme">LOGIN_PROTOCOL_SCHEME_HERE</string>
+    <string name="main_login_naver">네이버 아이디로 로그인</string>
+
+
+    <string name="mlp_1">MLP(Multi-layer Perceptron)는 기본적으로, 특정 숫자 값을 가지는 인공 뉴런들의 집합입니다.</string>
+    <string name="mlp_2">MLP의 인공 뉴런층들은 그 위치에 따라 입력층, 은닉층, 출력층으로 나뉩니다.\n각 층 간의 뉴런들은 모두 완전히 연결되어 있습니다.\n(fully-connected-layer)</string>
+    <string name="mlp_3">"앉아"라는 명령을 분류해봅시다.\n먼저, 준비된 단어 임베딩을 통해 "앉아"를 입력층 뉴런 수와 같은 크기의 숫자 벡터로 변경합니다</string>
+    <string name="mlp_4">변경된 숫자 벡터를 입력층에 투입합니다.</string>
+    <string name="mlp_5">입력 뉴런층의 값들이 연결선들의 가중치들에 의해 은닉 뉴런층으로 합쳐집니다.\n이 때 활성화(activation) 함수 들에 의해 값이 0~1 사이로 정해집니다.\n여기서는 ReLU를 사용하여, 1에 가까울수록 진하게 활성화 된 것을 볼 수 있습니다.</string>
+    <string name="mlp_6">비슷한 방식으로 은닉 뉴런층들의 값이 출력층으로 전파됩니다.</string>
+    <string name="mlp_7">SoftMax 함수는 출력층들의 값의 합이 1이 되도록 조정해 줍니다.</string>
+    <string name="mlp_8">MLP는 가장 큰 값을 가지는 뉴런의 레이블(label)을 최종 출력으로 선택합니다.</string>
+
+
+    <string name="rnn_1">RNN(Recurrent Nerual Network)은 MLP와 같이, 특정 숫자 값을 가지는 인공 뉴런들의 집합입니다.</string>
+    <string name="rnn_2">하지만 RNN은 시간적으로 확장이 가능한 구조를 가지고 있는데, 한 층에 한 개의 뉴런만을 가지는 아주 간단한 RNN 네트워크 구조를 통해 이를 살펴봅시다.</string>
+    <string name="rnn_3">먼저, "예삐야"라는 첫 번째 어절을 입력으로 넣고, 은닉층과 출력층을 활성화 해 봅시다.</string>
+    <string name="rnn_4">RNN의 Recurrent는 이 은닉층이 시간에 따라 재귀적으로 업데이트 되는 것을 의미합니다.</string>
+    <string name="rnn_5">시간에 따른 변화를 옆으로 펼치면, 두 번째 시간대의 은닉층은, "앉아"라는 새로운 입력 뿐 아니라, 이전 은닉층의 값 또한 입력으로 받습니다.\n이 과정은 최종 입력까지 재귀적으로 반복됩니다.</string>
+    <string name="rnn_6">최종 입력 단계에서, RNN은 재귀적으로 업데이트 된 최종 은닉층에 의해 활성화된 출력을 반환합니다</string>
+
+    <string name="dqn_1">DQN(Deep Q-Network)의 기본 모델은, MLP의 입력층-은닉층-출력층 구조와 같습니다.\n다만, DQN에서 입력층은 상태, 출력층은 행동으로 불립니다.\n즉,DQN은 상태를 받아 행동을 반환하는 강화학습 네트워크입니다.</string>
+    <string name="dqn_2">간단하게, -앉아-라는 입력 상태를 생각해봅시다. MLP와 마찬가지로, 활성화와 은닉층을 거쳐 네트워크는 -앉기-라는 행동을 반환합니다. </string>
+    <string name="dqn_3">이렇게 주어진 상태에서 최적의 행동을 선택하는 것을 exploitation(착취)라고 합니다.\n네트워크가 완벽하게 학습되기 전에는, 위 처럼 -숙여-라는 입력에 -앉기-라는 의도하지 않은 출력을 반환할 수도 있습니다. </string>
+    <string name="dqn_4">-숙여-라는 입력이 주어지면, 현재 네트워크 상황에따라 DQN은 -앉기-를 반환합니다. 이 반환에 대해, -행동 맞추기-게임은 -1이라는 음의 보상을 반환하고 이를 통해 네트워크를 업데이트 합니다. </string>
+    <string name="dqn_5">업데이트 된 네트워크는 다음에 -숙여-라는 입력에 대해 이제 -엎드리기- 행동을 반환하고, 그에 따라 주어진 +1의 보상은 이 패턴을 더 강화합니다. </string>
+
+    <string name="drqn_1">DRQN(Deep Recurrent Q-Network)은 DQN을 시간적으로 확장한 모델입니다. 마치 RNN이 MLP를 시간적으로 확장한 것과 유사합니다.</string>
+    <string name="drqn_2">DRQN의 은닉층은 이전 은닉층의 값과 새로운 입력상태를 재귀적(recurrently)으로 받아 활성화 값을 업데이트 합니다.\n그리고 마지막 입력이 주어졌을때, 최종 반환을 반환합니다.\n위에서는 -예삐야 앉아...-라는 상태 입력에 대해 -엎드리기-라는 잘못된 반환을 내놓는 초기 상태를 볼 수 있습니다.</string>
+    <string name="drqn_3">DRQN은 잘못된 출력을 개선하거나, 올바른 출력을 강화하는 데 보상을 사용합니다. \n여기서는 엎드리기라는 행동 출력이 -1이라는 음의 보상을 가져옴으로써, 전체 네트워크를 업데이트합니다.</string>
+    <string name="drqn_4">업데이트 된 네트워크는, 다음 입력에 대해 올바른 출력을 하도록 유도됩니다.</string>
+    
+
+
+
+
+</resources>
+

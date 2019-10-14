@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/interactIdleBackground">
+
+    <LinearLayout
+        android:id="@+id/btnRecord"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:src="@drawable/ic_mic"
+        android:clickable="false"
+        android:background="@drawable/shape_circle_button" >
+
+        <ImageView
+            android:id="@+id/btnImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tint="@color/idleMicBtnIcon"
+            android:src="@drawable/ic_mic_off"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

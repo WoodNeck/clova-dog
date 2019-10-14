@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/tools"
+    android:id="@+id/dogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dogWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 70% Height -->
+            <RelativeLayout
+                android:id="@+id/dogViewWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".70"
+                android:orientation="vertical"
+                android:clickable="true" >
+
+                <com.cidteamq.clovaproject.DogView
+                    android:id="@+id/dogView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <!-- 30% Height -->
+            <com.cidteamq.clovaproject.interact.InteractAreaLayout
+                android:id="@+id/interactAreaWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".30" >
+
+                <com.cidteamq.clovaproject.interact.fragment.InteractIdleView
+                    android:id="@+id/idleFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+                <com.cidteamq.clovaproject.interact.fragment.InteractVoiceView
+                    android:id="@+id/voiceFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <com.cidteamq.clovaproject.interact.fragment.InteractResultView
+                    android:id="@+id/resultFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <com.cidteamq.clovaproject.interact.fragment.InteractFeedbackView
+                    android:id="@+id/feedbackFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+            </com.cidteamq.clovaproject.interact.InteractAreaLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:contentInsetStart="0dp"
+            style="@style/Toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/dashboardBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/shape_circle_button_filled"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/dashboardIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:tint="@color/white"
+                android:src="@drawable/ic_signal_off"
+                android:visibility="gone" />
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/connectionIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:id="@+id/dashboardStatusIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="2dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_circle_button_filled"
+                android:backgroundTint="#ff9800"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/refreshIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_refresh"
+                    android:tint="@color/white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/newLogCounter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="2"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/modelInfoBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/shape_circle_button_filled"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/modelInfoIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_introduction"
+                android:tint="@color/white"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboardWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.cidteamq.clovaproject.dashboard.DashboardView
+            android:id="@+id/dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.cidteamq.clovaproject.modelInfo.ModelInfoWrapper
+        android:id="@+id/modelInfoWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+    </com.cidteamq.clovaproject.modelInfo.ModelInfoWrapper>
+
+</RelativeLayout>

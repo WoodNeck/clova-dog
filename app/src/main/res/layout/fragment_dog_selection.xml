@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dogBtn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:ignore="MissingPrefix" >
+
+    <ImageView
+        android:id="@+id/dogImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:tint="@color/white"
+        android:src="@mipmap/beagle_icon" />
+
+    <LinearLayout
+        android:id="@+id/descWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="60dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/dogDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MLP는 Multi Layer Perceptron의 약어로 가장 기본적인 딥러닝 모델입니다."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+        <View android:id="@+id/separator"
+            android:background="#ffffff"
+            android:layout_width = "250dp"
+            android:layout_height="1dip"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/modelDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MLP는 Multi Layer Perceptron의 약어로 가장 기본적인 딥러닝 모델입니다."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/dogSelectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="이 강아지로 할래요"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="30dp"
+        fbutton:shadowEnabled="true"
+        fbutton:cornerRadius="20dp" />
+
+    <TextView
+        android:id="@+id/modelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/footer"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        fontPath="fonts/swagger.ttf" />
+
+    <TextView
+        android:id="@+id/dogName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/modelName"
+        android:gravity="center"
+        android:text="BEAGLE"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        android:maxLines="1"
+        fontPath="fonts/swagger.ttf" />
+
+    <Space
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

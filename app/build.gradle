@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.cidteamq.clovaproject"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        debug {
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    aaptOptions {
+        noCompress '.unity3d', '.ress', '.resource', '.obb'
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:multidex:1.0.1'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    google()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.google.com' }
+}
+
+dependencies {
+    compile 'com.amazonaws:aws-android-sdk-core:2.6.+'
+    compile 'com.amazonaws:aws-android-sdk-cognito:2.6.+'
+    compile 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.6.+'
+
+    // fb
+    compile 'com.facebook.android:facebook-login:[4,5)'
+
+    // naver
+    compile 'com.naver.nid:naveridlogin-android-sdk:4.2.0'
+
+}
+
+dependencies {
+    // Essential Dependencies
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.naver.speech.clientapi:naverspeech-sdk-android:1.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.19.2"
+    testCompile 'junit:junit:4.12'
+
+    // UI/UX Libraries
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'com.wrapp.floatlabelededittext:library:0.0.6'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.xgc1986.android:parallaxpagertransformer:1.0.4'
+    compile 'me.grantland:autofittextview:0.2.+'
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+    compile 'com.nex3z:flow-layout:1.0.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.pnikosis:materialish-progress:1.7'
+    compile('com.mikepenz:aboutlibraries:6.0.1@aar') {
+        transitive = true
+    }
+    compile("com.mikepenz:materialdrawer:6.0.2@aar") {
+        transitive = true
+    }
+}
+
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:2.2.1"
+    }
+}
+
+apply plugin: "org.jlleitschuh.gradle.ktlint"

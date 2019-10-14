@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dashboardHead"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:tint="@color/colorPrimary"
+        android:src="@drawable/ic_arrow_back"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/fragmentTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.6" />
+
+    <Space
+        android:layout_width="60dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

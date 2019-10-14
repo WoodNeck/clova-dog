@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voiceViewWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/interactVoiceBackground"
+    android:orientation="vertical">
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/csrResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:maxLines="1"
+        android:textColor="@color/voiceInactive"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        android:text="@string/voice_holder" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progressIndicator"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

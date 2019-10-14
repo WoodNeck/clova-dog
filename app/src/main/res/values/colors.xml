@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4caf50</color>
+    <color name="colorPrimaryDark">#087f23</color>
+    <color name="colorAccent">#80e27e</color>
+
+    <!-- Overall -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="appBackground">#262022</color>
+    <color name="transparent">#00ffffff</color>
+
+    <!-- DogActivity -->
+    <color name="dogColor">#e85a90</color>
+        <color name="dogMenuBackground">#6b615c</color>
+        <color name="dogMenuSelected">#30d1d5</color>
+    <color name="interactIdleBackground">#4caf50</color>
+        <color name="idleMicBtnIcon">#ffffff</color>
+        <color name="idleMicBtnBackground">#ffffff</color>
+    <color name="interactVoiceBackground">#f44336</color>
+        <color name="voiceInactive">#ffffff</color>
+        <color name="voiceActive">#e85a90</color>
+        <color name="voiceSet">#fafafa</color>
+        <color name="voiceError">#260e04</color>
+    <color name="interactResultBackground">#f44336</color>
+    <color name="interactFeedbackBackground">#FFC107</color>
+
+</resources>
